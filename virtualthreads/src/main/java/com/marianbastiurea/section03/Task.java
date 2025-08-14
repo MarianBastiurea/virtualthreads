@@ -16,9 +16,9 @@ public class Task {
   }
 
   public static void cpuIntensive(int i){
-      logger.info("starting cpu task. Thread info:{} ", Thread.currentThread());
+     // logger.info("starting cpu task. Thread info:{} ", Thread.currentThread());
       var timeTaken= CommonUtil.timer(()->findFibonacci(i));
-      logger.info("ending cpu task.Thread info: {}", Thread.currentThread());
+     // logger.info("ending cpu task.Thread info: {}", timeTaken);
   }
 
 }
