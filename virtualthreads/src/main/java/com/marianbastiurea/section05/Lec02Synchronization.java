@@ -8,8 +8,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lec01RaceCondition {
-    private static final Logger logger = LoggerFactory.getLogger(Lec01RaceCondition.class);
+public class Lec02Synchronization {
+    private static final Logger logger = LoggerFactory.getLogger(Lec02Synchronization.class);
     private static final List<Integer> list = new ArrayList<>();
 
     public static void main(String[] args) {
@@ -34,7 +34,7 @@ public class Lec01RaceCondition {
 
     }
 
-    private static void inMemoryTask() {
+    private static synchronized void inMemoryTask() {
         list.add(1);
     }
 }

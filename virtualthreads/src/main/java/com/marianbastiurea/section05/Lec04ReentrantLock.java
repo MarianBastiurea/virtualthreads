@@ -7,10 +7,13 @@ import org.slf4j.LoggerFactory;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
-public class Lec01RaceCondition {
-    private static final Logger logger = LoggerFactory.getLogger(Lec01RaceCondition.class);
+public class Lec04ReentrantLock {
+    private static final Logger logger = LoggerFactory.getLogger(Lec04ReentrantLock.class);
     private static final List<Integer> list = new ArrayList<>();
+    private static final Lock lock = new ReentrantLock(true);
 
     public static void main(String[] args) {
         demo(Thread.ofVirtual());
@@ -35,6 +38,14 @@ public class Lec01RaceCondition {
     }
 
     private static void inMemoryTask() {
-        list.add(1);
+        try {
+            lock.lock();
+            list.add(1);
+        } catch (Exception e) {
+            logger.info("error", e);
+        } finally {
+            lock.unlock();
+        }
+
     }
 }
