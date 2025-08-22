@@ -42,7 +42,7 @@ public class Lec02ThreadLocal {
         var threadName = "child-of-" + Thread.currentThread().getName();
         Thread.ofVirtual().name(threadName).start(Lec02ThreadLocal::callExternalService);
     }
-    
+
     private static void callExternalService(){
         logger.info("preparing HTTP request with token: {}", SESSION_TOKEN.get());
     }
