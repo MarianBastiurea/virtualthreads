@@ -15,6 +15,14 @@
     <logback.version>1.5.12</logback.version>
   </properties>
 
+  <parent>
+    <groupId>com.marianbastiurea</groupId>
+    <artifactId>java-virtual-threads-jmeter-spring-monorepo</artifactId>
+    <version>1.0.0</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+
   <dependencies>
     <dependency>
       <groupId>org.openjfx</groupId>

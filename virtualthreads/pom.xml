@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Parent coordinates -->
+    <groupId>com.marianbastiurea</groupId>
+    <artifactId>java-virtual-threads-jmeter-spring-monorepo</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <name>virtual threads</name>
+    <description>Repository containing multiple modules: Virtual Threads, Spring Boot app, JMeter tests, etc.</description>
+
+    <!-- Setări globale -->
+    <properties>
+        <java.version>23</java.version>
+        <spring.boot.version>3.3.2</spring.boot.version>
+        <maven.compiler.release>23</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!-- Centralizează versiunile (importate de toate modulele) -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Modulele din repo -->
+    <modules>
+        <module>virtual-threads-basics</module>
+        <!-- aici vei adăuga:
+             <module>spring-boot-app</module>
+             <module>jmeter-load-tests</module>
+             <module>reactive-vs-cf</module>
+        -->
+    </modules>
+</project>
