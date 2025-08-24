@@ -1,0 +1,12 @@
+com/marianbastiurea/dto/LocalRecommendations.class
+com/marianbastiurea/dto/CarRental.class
+com/marianbastiurea/dto/Weather.class
+com/marianbastiurea/dto/Transportation.class
+com/marianbastiurea/dto/TripReservationRequest.class
+com/marianbastiurea/dto/Event.class
+com/marianbastiurea/dto/Flight.class
+com/marianbastiurea/dto/FlightReservationRequest.class
+com/marianbastiurea/dto/FlightReservationResponse.class
+com/marianbastiurea/dto/Accommodation.class
+com/marianbastiurea/dto/TripPlan.class
+com/marianbastiurea/dto/PublicTransportation.class
