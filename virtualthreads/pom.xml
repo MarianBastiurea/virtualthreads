@@ -4,7 +4,6 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Parent coordinates -->
     <groupId>com.marianbastiurea</groupId>
     <artifactId>java-virtual-threads-jmeter-spring-monorepo</artifactId>
     <version>1.0.0</version>
@@ -13,7 +12,6 @@
     <name>virtual threads</name>
     <description>Repository containing multiple modules: Virtual Threads, Spring Boot app, JMeter tests, etc.</description>
 
-    <!-- Setări globale -->
     <properties>
         <java.version>23</java.version>
         <spring.boot.version>3.3.2</spring.boot.version>
@@ -21,7 +19,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <!-- Centralizează versiunile (importate de toate modulele) -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -34,13 +31,36 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- Modulele din repo -->
+    <!-- 👇 Adaugă asta în parent -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring.boot.version}</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <release>${java.version}</release>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>3.2.5</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
     <modules>
         <module>virtual-threads-basics</module>
-        <!-- aici vei adăuga:
-             <module>spring-boot-app</module>
-             <module>jmeter-load-tests</module>
-             <module>reactive-vs-cf</module>
-        -->
+        <module>trip-advisor</module>
     </modules>
 </project>
