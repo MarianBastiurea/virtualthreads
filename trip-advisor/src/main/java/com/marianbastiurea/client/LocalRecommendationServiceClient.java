@@ -1,10 +1,9 @@
 package com.marianbastiurea.client;
 
 import com.marianbastiurea.dto.LocalRecommendations;
-import lombok.RequiredArgsConstructor;
 import org.springframework.web.client.RestClient;
 
-@RequiredArgsConstructor
+
 public class LocalRecommendationServiceClient {
 
     private final RestClient restClient;
@@ -19,5 +18,4 @@ public class LocalRecommendationServiceClient {
                 .retrieve()
                 .body(LocalRecommendations.class);
     }
-
 }

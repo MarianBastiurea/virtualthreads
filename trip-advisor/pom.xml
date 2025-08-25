@@ -57,13 +57,7 @@
                 <version>3.13.0</version>
                 <configuration>
                     <release>23</release>
-                    <annotationProcessorPaths>
-                        <path>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>1.18.38</version>
-                        </path>
-                    </annotationProcessorPaths>
+                    <parameters>true</parameters>
                 </configuration>
             </plugin>
 
@@ -78,6 +72,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
             </plugin>
+
         </plugins>
     </build>
 </project>

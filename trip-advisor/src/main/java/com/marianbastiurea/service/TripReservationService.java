@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import java.util.Comparator;
 
 @Service
-@RequiredArgsConstructor
+
 public class TripReservationService {
 
     private final FlightSearchServiceClient searchServiceClient;

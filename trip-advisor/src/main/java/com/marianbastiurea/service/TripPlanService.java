@@ -3,7 +3,6 @@ package com.marianbastiurea.service;
 
 import com.marianbastiurea.client.*;
 import com.marianbastiurea.dto.TripPlan;
-import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
 @Service
-@RequiredArgsConstructor
+
 public class TripPlanService {
 
     private static final Logger log = LoggerFactory.getLogger(TripPlanService.class);
