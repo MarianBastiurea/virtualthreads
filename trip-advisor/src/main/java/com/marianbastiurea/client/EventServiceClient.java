@@ -23,5 +23,4 @@ public class EventServiceClient {
                 .body(new ParameterizedTypeReference<List<Event>>() {
                 });
     }
-
 }
