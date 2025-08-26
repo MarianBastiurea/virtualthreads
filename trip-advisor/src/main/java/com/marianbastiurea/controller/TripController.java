@@ -5,8 +5,6 @@ import com.marianbastiurea.dto.TripPlan;
 import com.marianbastiurea.dto.TripReservationRequest;
 import com.marianbastiurea.service.TripPlanService;
 import com.marianbastiurea.service.TripReservationService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,15 +21,13 @@ public class TripController {
         this.reservationService = reservationService;
     }
 
-
-
     @GetMapping("{airportCode}")
-    public TripPlan planTrip(@PathVariable("airportCode") String airportCode){
+    public TripPlan planTrip(@PathVariable("airportCode") String airportCode) {
         return this.planService.getTripPlan(airportCode);
     }
 
     @PostMapping("reserve")
-    public FlightReservationResponse reserveFlight(@RequestBody TripReservationRequest request){
+    public FlightReservationResponse reserveFlight(@RequestBody TripReservationRequest request) {
         return this.reservationService.reserve(request);
     }
 
