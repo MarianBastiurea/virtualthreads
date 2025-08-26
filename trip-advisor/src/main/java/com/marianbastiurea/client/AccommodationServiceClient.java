@@ -6,7 +6,6 @@ import org.springframework.web.client.RestClient;
 
 import java.util.List;
 
-
 public class AccommodationServiceClient {
 
     private final RestClient client;
@@ -22,5 +21,4 @@ public class AccommodationServiceClient {
                 .body(new ParameterizedTypeReference<List<Accommodation>>() {
                 });
     }
-
 }

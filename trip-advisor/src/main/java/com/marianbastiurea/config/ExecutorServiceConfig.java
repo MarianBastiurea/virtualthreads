@@ -13,14 +13,13 @@ public class ExecutorServiceConfig {
 
     @Bean
     @ConditionalOnThreading(Threading.VIRTUAL)
-    public ExecutorService virtualThreadExecutor(){
+    public ExecutorService virtualThreadExecutor() {
         return Executors.newVirtualThreadPerTaskExecutor();
     }
 
     @Bean
     @ConditionalOnThreading(Threading.PLATFORM)
-    public ExecutorService platformThreadExecutor(){
+    public ExecutorService platformThreadExecutor() {
         return Executors.newCachedThreadPool();
     }
-
 }

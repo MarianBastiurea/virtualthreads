@@ -32,7 +32,7 @@ public class TripPlanService {
         this.executor = executor;
     }
 
-    public TripPlan getTripPlan(String airportCode){
+    public TripPlan getTripPlan(String airportCode) {
         var events = this.executor.submit(() -> this.eventServiceClient.getEvents(airportCode));
         var weather = this.executor.submit(() -> this.weatherServiceClient.getWeather(airportCode));
         var accommodations = this.executor.submit(() -> this.accommodationServiceClient.getAccommodations(airportCode));
@@ -48,7 +48,7 @@ public class TripPlanService {
         );
     }
 
-    private <T> T getOrElse(Future<T> future, T defaultValue){
+    private <T> T getOrElse(Future<T> future, T defaultValue) {
         try {
             return future.get();
         } catch (Exception e) {
@@ -56,5 +56,4 @@ public class TripPlanService {
         }
         return defaultValue;
     }
-
 }

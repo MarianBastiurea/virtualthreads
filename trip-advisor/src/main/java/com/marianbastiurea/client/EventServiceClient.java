@@ -6,7 +6,6 @@ import org.springframework.web.client.RestClient;
 
 import java.util.List;
 
-
 public class EventServiceClient {
 
     private final RestClient client;

@@ -19,5 +19,4 @@ public class FlightReservationServiceClient {
                 .retrieve()
                 .body(FlightReservationResponse.class);
     }
-
 }

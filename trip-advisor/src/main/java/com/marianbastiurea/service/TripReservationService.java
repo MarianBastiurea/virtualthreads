@@ -6,7 +6,6 @@ import com.marianbastiurea.dto.FlightReservationRequest;
 import com.marianbastiurea.dto.FlightReservationResponse;
 import com.marianbastiurea.dto.TripReservationRequest;
 import com.marianbastiurea.dto.Flight;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
